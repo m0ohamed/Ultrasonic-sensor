@@ -1,0 +1,33 @@
+??:??:?? **** Incremental Build of configuration Debug for project Mini_proj4 ****
+make all 
+Building file: ../Ultrasonic_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Ultrasonic_sensor.d" -MT"Ultrasonic_sensor.o" -c -o "Ultrasonic_sensor.o" "../Ultrasonic_sensor.c"
+In file included from ../Ultrasonic_sensor.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ultrasonic_sensor.c
+ 
+Building target: Mini_proj4.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mini_proj4.map -mmcu=atmega32 -o "Mini_proj4.elf"  ./LCD.o ./My_GPIO.o ./Ultrasonic.o ./Ultrasonic_sensor.o ./icu.o   
+Finished building target: Mini_proj4.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mini_proj4.elf  >"Mini_proj4.lss"
+Finished building: Mini_proj4.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mini_proj4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9746 bytes (29.7% Full)
+(.text + .data + .bootloader)
+
+Data:        319 bytes (15.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
